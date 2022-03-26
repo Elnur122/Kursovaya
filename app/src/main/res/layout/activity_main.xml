@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Avto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Авторизация"
+        android:textColor="#8B0000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@id/textViewLogin"
+        app:layout_constraintTop_toBottomOf="@id/Avto" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:ems="12"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@id/textViewPassword"
+        app:layout_constraintTop_toBottomOf="@id/Login" />
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="115dp"
+        android:text="Логин"
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Avto" />
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="55dp"
+        android:text="Пароль"
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
+
+    <TextView
+        android:id="@+id/textViewCor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="55dp"
+        android:text="Не верный логин или пароль:"
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Password" />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="55dp"
+        android:text="0"
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/textViewCor"
+        app:layout_constraintTop_toBottomOf="@id/Password" />
+
+    <TextView
+        android:id="@+id/textViewTvCaptcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCor" />
+
+    <EditText
+        android:id="@+id/Captcha"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#8B0000"
+        android:textSize="23dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/textViewTvCaptcha"
+        app:layout_constraintTop_toBottomOf="@id/textViewCount" />
+
+    <Button
+        android:id="@+id/button_pro"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_shape_btn"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="OnClickPro"
+        android:text="Подтвердить"
+        android:textColor="@color/white"
+        android:textSize="8dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@id/Captcha"
+        app:layout_constraintTop_toBottomOf="@id/textViewCor" />
+
+    <Button
+        android:id="@+id/button_sig"
+        android:layout_width="182dp"
+        android:layout_height="77dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/round_shape_btn"
+        android:backgroundTint="@color/teal_700"
+        android:text="Войти"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPassword" />
+
+    <Button
+        android:id="@+id/button_reg"
+        android:layout_width="182dp"
+        android:layout_height="77dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_shape_btn"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="OnClickReg"
+        android:text="Регистрация"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
